@@ -3,7 +3,7 @@ const posts=[
         id:1,
         user:"Jona",
         content:"I am too tired. I cant even eat food.",
-        likes:0
+        likes:3
     },
     {
         id:2,
@@ -19,33 +19,33 @@ const posts=[
         id:4,
         user:"Jannet",
         content:"I am a good developer. I code HTML",
-        likes:0
+        likes:6
     },  {
         id:5,
         user:"Jerusha",
         content:"I am a good to beat you out so hard.",
-        likes:0
+        likes:5
     },
 ]
 
 new Vue(
     {
-        el:'#app',
+        el:"#app",
         data:{
             posts:posts
         },
         computed:{
             sortedPosts(){
                 return this.posts.sort((a,b)=>{
-                    return b.votes - a.votes;
+                    return b.likes - a.likes;
                 })
             }
-        },
+        }
+        ,
         methods:{
-            like(postId){
-                const post=posts.find(
-                    post=>post.id==postId
-                )
+            like(postID){
+                const post=posts.find(post=>post.id==postID);
+
                 post.likes++;
             }
         }
