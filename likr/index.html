@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/main.css">
+    <title>Likr</title>
+</head>
+<body>
+
+
+    <div id="app">
+        <h1 class="title">
+            Likr
+        </h1>
+        <div class="posts">
+            <div class="post" v-for="post in sortedPosts" v-bind:key="post.id" v-bind:class="{'blue-border':post.votes >= 10}">
+                <h3>{{post.user}}</h3>
+                <p class="post-content">
+                    {{post.content}}
+                </p>
+                <small>
+                    {{post.likes}} likes <a href="#" class="like-btn" v-on:click="like(post.id)">Like</a>
+                </small>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>

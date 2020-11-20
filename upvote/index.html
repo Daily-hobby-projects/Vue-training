@@ -22,8 +22,7 @@
       <h2 class="title has-text-centered dividing-header">Upvote</h2>
       <div class="section">
         <article class="media" v-for="submission in sortedSubmissions" v-bind:key="submission.id" 
-          v-bind:class="{'blue-border':submission.votes >= 100}"
-        >
+          v-bind:class="{'blue-border':submission.votes >= 100}">
           <figure class="media-left">
             <img v-bind:src="submission.submissionImage" alt="" class="image is-64x64" />
           </figure>

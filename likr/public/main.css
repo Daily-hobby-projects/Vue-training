@@ -1,0 +1,20 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+a{
+    text-decoration: none;
+}
+.title{
+    text-align: center;
+}
+.posts{
+    width: 80%;
+    margin: auto;
+}
+.post{
+    padding: 5px;
+    border: 0.9px solid darkslategray;
+}
+.blue-border{
+    border: 0.9px solid dodgerblue;
+}
