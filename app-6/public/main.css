@@ -1,0 +1,16 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+}
+html{
+    background-color: dodgerblue;
+}
+.posts{
+    width: 80%;
+    margin: auto;
+}
+.post{
+    padding: 10px;
+    box-shadow: 0 2px 2px 0 lightgray;
+    margin-top: 20px;
+    background-color: white;
+}

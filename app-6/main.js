@@ -29,26 +29,41 @@ const posts=[
 ]
 
 
+const postComponent={
+    template:`
+    
+    <div>
+        <h4>{{post.user}}</h4>
+        <p>{{post.content}}</p>
+        <a href="#" @click="like(post.id)">{{post.likes}} Likes</a>
+    </div>
+    
+    
+    `,
+    props:['posts','post'],
+    methods:{
+        like(postID){
+            const post=posts.find(post=>post.id == postID);
+
+            post.likes++;
+        }
+    }
+}
 
 new Vue(
     {
         el:"#app",
+        components:{
+            "post-component":postComponent
+        },
         data:{
             posts:posts
         },
         computed:{
             sortedPosts(){
-                return this.posts.sort((a,b)=>{
-                    return b.likes - a.likes;
+                return posts.sort((a,b)=>{
+                    return b.likes -a.likes;
                 })
-            }
-        }
-        ,
-        methods:{
-            like(postID){
-                const post=posts.find(post=>post.id==postID);
-
-                post.likes++;
             }
         }
     }
