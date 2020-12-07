@@ -1,0 +1,24 @@
+.post{
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+}
+*{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.title{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color:green;
+    color: white;
+    padding: 20px;
+
+}
+
+.posts{
+    position: relative;
+    top: 100px;
+}

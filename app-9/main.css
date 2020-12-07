@@ -1,0 +1,30 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 0;
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: teal;
+}
+.head{
+    color: teal;
+}
+.posts{
+    width: 50%;
+    margin: auto;
+    position: relative;
+    top: 100px;
+}
+.post{
+    padding: 20px;
+}
+.title{
+    padding: 20px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color:teal;
+    color: white;
+}
